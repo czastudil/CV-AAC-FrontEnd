@@ -1,0 +1,9 @@
+.wizardImage {
+    position: relative;
+}
+
+.noImageWizard {
+    height: 500px;
+    text-align: center;
+    min-width: 50%
+}

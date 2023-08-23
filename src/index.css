@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body, html {
+    font-family: 'Comic Neue', cursive;
+}
+
+button {
+    font-family: 'Comic Neue', cursive;
+}
+
+input {
+    font-family: 'Comic Neue', cursive;
+}
+
+.YNbuttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.userContainer {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.textBoxStyle {
+    position: absolute;
+    background-color: greenyellow;
+    color: black;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.submitStyle {
+    position: absolute;
+    background-color: greenyellow;
+    border-color: green;
+}
+
+.popUpIndex {
+    padding: 10% 5%;
+    position: absolute;
+    background-color: white;
+    border: solid black;
+    left: 30%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+    .userContainer { flex-direction: column;}
+}

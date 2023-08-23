@@ -1,0 +1,67 @@
+.boundingBoxUserStyle {
+    position: absolute;
+    border-width: 15px;
+    border: solid rgb(252, 8, 183);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.boundingBoxUserStyle:hover {
+    opacity: 50%;
+    background-color: rgb(252, 8, 183);
+}
+
+.boundingBoxWizardStyle {
+    position: absolute;
+    border-width: 15px;
+    border: solid rgb(252, 8, 183);
+}
+
+.boundingBoxDeleteStyle {
+    position: absolute;
+    border-width: 15px;
+    border: solid red;
+}
+
+.boundingBoxDeleteStyle:hover {
+    opacity: 50%;
+    background-color: red;
+}
+
+.textInputStyle {
+    position: absolute;
+    background-color: rgb(252, 8, 183);
+    color: black;
+    height: 20px;
+    width: 100px;
+}
+
+.textBoxStyle {
+    position: absolute;
+    background-color: rgb(252, 8, 183);
+    color: black;
+    height: 20px;
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.textBoxDeleteStyle {
+    position: absolute;
+    background-color: red;
+    color: black;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.submitStyle {
+    position: absolute;
+    background-color: rgb(252, 8, 183);
+    border-color: pink;
+    top: 26px;
+    left: 2px;
+}
+
+.submitStyle:hover {
+    background-color: pink;
+}

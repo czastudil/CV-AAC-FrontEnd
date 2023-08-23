@@ -1,0 +1,116 @@
+.vocabBoard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.wordPlayer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid black;
+    margin-bottom: 10px;
+    min-height: 92px;
+}
+
+.contextualWords {
+    min-height: 92px;
+    width: auto;
+    display: flex;
+    flex-flow: wrap;
+    border: solid black;
+    margin-bottom: 10px;
+}
+
+.coreWords {
+    display: flex;
+    height: 1000px;
+    flex-flow: column wrap;
+    border: solid black;
+}
+
+button {
+    margin: 1%;
+}
+
+.currentWordButton {
+    height: 80px;
+    min-width: 65px;
+    justify-content: center;
+    align-items: center;
+    border-width: 3px;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wordButton {
+    height: 80px;
+    min-width: 65px;
+    justify-content: center;
+    align-items: center;
+    border-width: 3px;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.wordButton:hover {
+    opacity: 50%;
+}
+
+.wordButtonEditMode {
+    height: 80px;
+    min-width: 65px;
+    justify-content: center;
+    align-items: center;
+    border: solid red;
+    border-width: 3px;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.popUp {
+    padding: 10% 5%;
+    position: absolute;
+    background-color: white;
+    border: solid black;
+    left: 60%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wordButtonEditMode:hover {
+    opacity: 50%;
+    background-color: red;
+}
+
+.wordOnly {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttonImage {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50px;
+}
+
+.buttonImage:hover {
+    opacity: 50%;
+}
+
+.colorKeyLabels {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 30px 10px;
+}
+
+@media (max-width: 1500px) {
+    .coreWords {height: 1200px;}
+    .popUp {left: 30%;}
+}
