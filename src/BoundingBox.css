@@ -5,10 +5,10 @@
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.boundingBoxUserStyle:hover {
+/*.boundingBoxUserStyle:hover {
     opacity: 50%;
     background-color: rgb(252, 8, 183);
-}
+}*/
 
 .boundingBoxWizardStyle {
     position: absolute;

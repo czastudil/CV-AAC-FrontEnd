@@ -2,19 +2,37 @@ import React from 'react';
 import './BoundingBox.css';
 
 function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, deleteCallback, selectCallback, itemName, wizXOne, wizXTwo, wizYOne, wizYTwo }) {
+    const [opacity, setOpacity] = React.useState("");
+    const [backColor, setBackColor] = React.useState("");
+    const userStyles = {
+        "left": wizXOne+'px', 
+        "top": wizYOne-20+'px', 
+        "minWidth": (wizXTwo-wizXOne)+'px',
+        "height": (wizYTwo-wizYOne+20)+'px',
+        "opacity": opacity,
+        "background-color": backColor
+    }
+    
+    const handleOnMouseHover = () => {
+        setOpacity("50%");
+        setBackColor("rgb(252, 8, 183)");
+    };
+
+    const handleOnMouseLeave = () => {
+        setOpacity("");
+        setBackColor("");
+    };
 
     return (
         <div>
             { role === 'user' ?
-                <div>
+                <div onMouseEnter={handleOnMouseHover}>
                     <div 
                     onClick={() => selectCallback(itemName)}
                     className='boundingBoxUserStyle' 
-                    style={{
-                        left: wizXOne+'px', 
-                        top: wizYOne-20+'px', 
-                        minWidth: (wizXTwo-wizXOne)+'px',
-                        height: (wizYTwo-wizYOne+20)+'px'}}>
+                    onMouseEnter={handleOnMouseHover}
+                    onMouseLeave={handleOnMouseLeave}
+                    style={userStyles}>
                         <div className='textBoxStyle' > 
                             {itemName} 
                         </div>
