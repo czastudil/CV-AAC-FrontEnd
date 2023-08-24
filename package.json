@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts --openssl-legacy-provider build",
     "start": "node scripts/heroku-start.js",
     "start-local": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build"
+    "deploy": "serve -s build"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "^3.4.1",
+    "serve": "^14.2.1",
     "websocket": "^1.0.34"
   },
   "browserslist": {
