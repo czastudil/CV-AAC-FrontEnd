@@ -7,6 +7,14 @@ import WizardInterface from './WizardInterface';
 
 //const client = new W3CWebSocket('ws://localhost:8000'); // For local testing
 const client = new W3CWebSocket('wss://salty-reef-90891-f0f8e22a6219.herokuapp.com/');
+// Ping the server every three seconds to prevent disconnecting
+function ping() {
+  client.send(JSON.stringify({
+    type: "ping"
+  }));
+}
+setInterval(ping, 30000);
+
 export default class App extends Component {
 
   state ={
@@ -264,6 +272,8 @@ export default class App extends Component {
             selectedImage: null,
             boundingBoxModeOn: false,
             mainImageWidth: 500 })
+        } else if (dataFromServer.type === "ping") {
+          console.log("Ping received");
         }
     };
     client.onerror = (error) => {
