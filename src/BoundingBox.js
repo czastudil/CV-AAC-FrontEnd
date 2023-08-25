@@ -13,7 +13,7 @@ function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, del
         "background-color": backColor
     }
     
-    const handleOnMouseHover = () => {
+    const handleOnMouseEnter = () => {
         setOpacity("50%");
         setBackColor("rgb(252, 8, 183)");
     };
@@ -26,11 +26,11 @@ function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, del
     return (
         <div>
             { role === 'user' ?
-                <div onMouseEnter={handleOnMouseHover}>
+                <div>
                     <div 
                     onClick={() => selectCallback(itemName)}
                     className='boundingBoxUserStyle' 
-                    onMouseEnter={handleOnMouseHover}
+                    onMouseEnter={handleOnMouseEnter}
                     onMouseLeave={handleOnMouseLeave}
                     style={userStyles}>
                         <div className='textBoxStyle' > 

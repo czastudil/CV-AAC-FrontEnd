@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './VocabBoard.css';
 
-import playButton from './assets/play-button.png'; // Play button icons created by Roundicons - Flaticon
-import deleteButton from './assets/trash-bin.png'; // Delete icons created by Pixel perfect - Flaticon
-import editButton from './assets/repairing-service.png'; // Gear icons created by Freepik - Flaticon
+import Button from './Button';
 
 function VocabBoard( { selectedItem, mode, mainImageWidth }) {
     const [ currentWords, setCurrentWords ] = useState([]);
@@ -11,7 +9,7 @@ function VocabBoard( { selectedItem, mode, mainImageWidth }) {
     const [ addWordPopUpOn, setAddWordPopUpOn ] = useState(false);
     const [ addWordPopUpPartOfSpeech, setAddWordPopUpPartOfSpeech] = useState('');
     const [ addWordPopUpInput, setAddWordPopUpInput ] = useState('');
-    const [ popUpType, setPopUpType ] = useState();
+    // const [ popUpType, setPopUpType ] = useState();
     const [ contextualWords, setContextualWords] = useState([{ word: '', partOfSpeech: null}])
 
     // words from https://aaclanguagelab.com/materials/100highfrequencycorewords21.pdf
@@ -379,32 +377,22 @@ function VocabBoard( { selectedItem, mode, mainImageWidth }) {
                             display: 'flex',
                             flexDirection: 'row'
                         }}>
-                            <div onClick={handleDelete}  style={{flex: 1, margin: '3px'}}>
-                                <img className='buttonImage' src={deleteButton} />
+                            <div onClick={handleDelete} style={{flex: 1, margin: '3px'}}>
+                                <Button buttonType="delete"/>
                             </div>
-                            <div onClick={handleClear} style={ {flex: 1, margin: '3px', marginTop: '9px'} }>
-                                <div 
-                                className='buttonImage' 
-                                style={{
-                                    backgroundColor: '#19bde0', 
-                                    borderRadius: '50%',
-                                    textAlign: 'center',
-                                    color: 'white',
-                                    verticalAlign: 'middle',
-                                    display: 'table-cell',
-                                    marginTop: 0,
-                                    fontWeight: 'bolder'}}>clear</div>
+                            <div onClick={handleClear} style={{flex: 1, margin: '3px', marginTop: '9px'}}>
+                                <Button buttonType="clear"/>
                             </div>
                         </div>
                         <div style={{
                             display: 'flex',
                             flexDirection: 'row'
                         }}>
-                            <div onClick={handlePlay} style={ {flex: 1, margin: '3px'}}>
-                                <img className='buttonImage' src={playButton} />
+                            <div onClick={handlePlay} style={{flex: 1, margin: '3px'}}>
+                                <Button buttonType="play"/>
                             </div>
                             <div onClick={handleEdit}  style={{flex: 1, margin: '3px'}}>
-                                <img className='buttonImage' src={editButton} />
+                                <Button buttonType="edit"/>
                             </div>
                         </div>
                     </div>

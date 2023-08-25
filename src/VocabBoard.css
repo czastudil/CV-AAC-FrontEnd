@@ -93,17 +93,6 @@ button {
     font-weight: bold;
 }
 
-.buttonImage {
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 50px;
-}
-
-.buttonImage:hover {
-    opacity: 50%;
-}
-
 .colorKeyLabels {
     font-size: x-large;
     font-weight: bold;
