@@ -12,6 +12,14 @@ function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, del
         "opacity": opacity,
         "background-color": backColor
     }
+
+    const deleteBoxStyles = {
+        left: wizXOne+'px', 
+        top: wizYOne-20+'px', 
+        minWidth: (wizXTwo-wizXOne)+'px',
+        height: (wizYTwo-wizYOne+20)+'px',
+        opacity: opacity
+    }
     
     const handleOnMouseEnter = () => {
         setOpacity("50%");
@@ -47,11 +55,8 @@ function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, del
                                 <div 
                                 onClick={() => deleteCallback(itemName)}
                                 className='boundingBoxDeleteStyle' 
-                                style={{
-                                    left: wizXOne+'px', 
-                                    top: wizYOne-20+'px', 
-                                    minWidth: (wizXTwo-wizXOne)+'px',
-                                    height: (wizYTwo-wizYOne+20)+'px'}}>
+                                style={deleteBoxStyles}
+                                onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
                                     <div className='textBoxDeleteStyle'> 
                                         {itemName} 
                                     </div>

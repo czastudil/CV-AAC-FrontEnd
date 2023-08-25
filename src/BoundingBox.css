@@ -22,10 +22,10 @@
     border: solid red;
 }
 
-.boundingBoxDeleteStyle:hover {
+/*.boundingBoxDeleteStyle:hover {
     opacity: 50%;
     background-color: red;
-}
+}*/
 
 .textInputStyle {
     position: absolute;
