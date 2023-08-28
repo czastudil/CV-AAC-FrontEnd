@@ -62,16 +62,9 @@ function VocabBoard( { selectedItem, mode, mainImageWidth }) {
 
     useEffect(determineWordsFromSelectedItem, [selectedItem]);
 
-    const wordButtonStyles = {
-        'height': '80px',
-        'min-width': '65px',
-        'justify-content': 'center',
-        'align-items': 'center',
-        'border-width': '3px',
-        'border-radius': '20%',
-        'display': 'flex',
-        'flex-direction': 'column',
-        'box-shadow': '0px 0px 5px 5px rgba(0, 0, 0, 0.5)'
+    const buttonStyle = {
+        'border': 'none',
+        'background': 'none',
     }
 
     /* 
@@ -183,7 +176,7 @@ function VocabBoard( { selectedItem, mode, mainImageWidth }) {
     
     function wordToWordButton(value, index) {
         return (
-            <button key={index + ' ' + Math.random()} onClick={() => setCurrentWords(prevWords => [...prevWords, value])}>
+            <button style={buttonStyle} key={index + ' ' + Math.random()} onClick={() => setCurrentWords(prevWords => [...prevWords, value])}>
                 <Button buttonType="word" word={value.word} wordColor={determineWordColor(value.partOfSpeech)} />
             </button>   
         )
@@ -213,8 +206,8 @@ function VocabBoard( { selectedItem, mode, mainImageWidth }) {
         }
 
         return (
-            <button key={index + ' ' + Math.random()} onClick={() => handleRemoveWord()}>
-                <Button buttonType="word" word={value.word} wordColor={determineWordColor(value.partOfSpeech)} />
+            <button style={buttonStyle} key={index + ' ' + Math.random()} onClick={() => handleRemoveWord()}>
+                <Button buttonType="editWord" word={value.word} wordColor={determineWordColor(value.partOfSpeech)} />
             </button>   
         )
     }
