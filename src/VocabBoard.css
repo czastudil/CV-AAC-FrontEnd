@@ -95,3 +95,7 @@ button {
     .coreWords {height: 1200px;}
     .popUp {left: 30%;}
 }
+
+.buttonSymbol {
+    scale: 50%;
+}

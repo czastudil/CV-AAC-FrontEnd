@@ -10,7 +10,7 @@ function BoundingBox({ deleteModeOn, role, submitCallback, itemNameCallback, del
         "minWidth": (wizXTwo-wizXOne)+'px',
         "height": (wizYTwo-wizYOne+20)+'px',
         "opacity": opacity,
-        "background-color": backColor
+        "backgroundColor": backColor
     }
 
     const deleteBoxStyles = {

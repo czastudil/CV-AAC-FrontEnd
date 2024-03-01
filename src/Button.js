@@ -5,7 +5,7 @@ import deleteButton from './assets/trash-bin.png'; // Delete icons created by Pi
 import playButton from './assets/play-button.png'; // Play button icons created by Roundicons - Flaticon
 import editButton from './assets/repairing-service.png'; // Gear icons created by Freepik - Flaticon
 
-function Button({ buttonType, word, wordColor }) {
+function Button({ buttonType, symbol, word, wordColor }) {
     const [opacity, setOpacity] = React.useState("");
     const buttonStyles = {
         "opacity": opacity
@@ -76,7 +76,10 @@ function Button({ buttonType, word, wordColor }) {
     } else if (buttonType === "word") {
         return (
             <div className="wordButton" onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} style={wordColor}>
-                <div className='wordOnly' style={wordStyles}>{word}</div>
+                <div className='wordOnly' style={wordStyles}>
+                    {symbol}
+                    {word}
+                </div>
             </div>
         )
     } else if (buttonType === "editWord") {
